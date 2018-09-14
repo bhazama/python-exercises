@@ -4,20 +4,47 @@ deposit = 1000
 new_savings_balance = savings_balance + deposit
 print("$" + str(new_savings_balance))
 # 2.You need to pay taxes on the $500 cash prize that you won to the IRS ( The tax rate is 30%). Calculate the tax amount and subtract this from your savings balance. Print the updated savings account balance and concatenate the dollar sign.
+cash_prize = 500
+tax_rate = 0.30
+tax_amount = 500 * 0.30
+print(tax_amount)
+updated_balance = new_savings_balance - tax_amount
+print(updated_balance)
 
 # 3. The savings account accrues an annual interest rate of 2%. Calculate the interest earned for the first quarter of 2018, using the original account balance from Question 1. Print the interst earned in the first quarter and concatenate the dollar sign.
+interest_rate = 0.2
+quarter_interest_rate = interest_rate / 4
+interest_earned = savings_balance * quarter_interest_rate
+print("$" + str(interest_earned))
 
 # 4. Function add
 # Create a function that will take two parameters named num1 and num2. This function will add two numbers. Print your result.
+def add(num1, num2):
+    return num1 + num2
+total = add(2,2)
+print("ADD:" + str(total))
 
 # 5. Function subtract
 # Create a function that will take two parameters named num1 and num2. This function will subtract two numbers. Print your result.
+def sub(num1,num2):
+   return num1 - num2
+difference = sub(5,2)
+print("DIFFERENCE:" + str(difference))
 
 # 6. Function add-then-subtract
 # Create a function that will take in three parameters named num1, num2 and num3. The function will sum up the first two parameters (num1 and num2) and subtract it from the third parameter (num3). Please use your previous functions (i.e. add or subtract) for this exercise. Print your result.
+def add_then_subtract(num1,num2,num3):
+    return sub(num3,add(num1,num2))
+result = add_then_subtract(2,3,10)
+print("RESULT:" + str(result))
+
 
 # 7. Function shoe size
 #  Create a function that will take in a parameter named inches. This function will convert inches to centimeters(cm). Print your result. 
+def shoe_size(inches):
+    return inches * 2.54
+shoes = shoe_size(12)
+print("SHOES:" + str(shoes) + " centimeters")
 
 # 8. Create a function that will take in a parameter named cel. The function will convert Celsius into Fahrenheit. Print your result.
 
